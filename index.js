@@ -1,16 +1,14 @@
-localStorage.setItem("persona", JSON.stringify({nombre:"Lautaro", apellido:"Farias"}))
-console.log(JSON.parse(localStorage.getItem("persona")))
+const nombre = "Lautaro"
+const apellido = "Farias"
 
-// sessionStorage.setItem("Persona", JSON.stringify({nombre:"Lautaro", apellido:"Farias"}))
-// console.log(JSON.parse(sessionStorage.getItem("Persona")))
+const datos = {
+    nombre,
+    apellido
+}
 
-localStorage.setItem("nombre","lautaro")
-localStorage.setItem("apellido","Farias")
-console.log(localStorage.getItem("nombre","apellido"))
+sessionStorage.setItem("datos", JSON.stringify("datos"))
+localStorage.setItem("datos", JSON.stringify("datos"))
 
-// sessionStorage.setItem("nombre","Lautaro")
-// sessionStorage.setItem("apellido", "Farias")
-// console.log(sessionStorage.getItem("nombre","apellido"))
+const now = new Date()
 
-// document.cookie = "personaCookie=LautaroFariasCookie"
-// document.cookie = "personaCaducidad=persona;expire=" + new Date(2023,24,4)
+document.cookie= datos=${JSON.stringify(datos)};expires=${new Date(now.getTime()2 * 60000)}
